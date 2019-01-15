@@ -22,6 +22,12 @@
 			}
 		},
 		{
+			"path": "pages/index-detail/index-detail",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
+		},
+		{
 			"path": "pages/shang/shang",
 			"style": {
 				"navigationBarTitleText": "商城"
