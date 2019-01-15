@@ -1,0 +1,81 @@
+{
+	// uni-app通过pages节点配置应用有哪些页面组成,pages节点接收一个数组,每个项都是个对象
+	// 第一项为应用的入口页,若页面新增/删除都需要修改pages
+	//属性:
+	//path:String 配置页面路径
+	//style:Object 用于设置每个页面的状态栏,导航条,标题,窗口背景色等 navigationBarTitleText为标题文字
+	//页面中配置项会覆盖 globalStyle 中相同的配置项
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#fff",
+				"backgroundColor": "#fff"
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/shang/shang",
+			"style": {
+				"navigationBarTitleText": "商城"
+			}
+		},
+		{
+			"path": "pages/icon/icon",
+			"style": {
+				"navigationBarTitleText": "图标"
+			}
+		},
+		{
+			"path": "pages/personal/personal",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		}
+
+	],
+	// 用于设置应用的状态栏、导航条、标题、窗口背景色等。
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	// 通过tabBar配置指定tab栏,一级tab切换时显示的对应页
+	//设置position为top时,不会显示icon,tabBar中的list时一个数组,最少设置两个,最多设置5个,按照数组的顺序排序
+	// 顶部的tabBar目前仅微信小程序支持,需要用到顶部选项卡的话，参考 hello uni-app->模板->顶部选项卡。
+	"tabBar": {
+		"color": "#000000",
+		"selectedColor": "#2F85FC",
+		"backgroundColor": "#FFFFFF",
+		"borderStyle": "black",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/shouye.png",
+			"selectedIconPath": "static/shouye-active.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/icon/icon",
+			"iconPath": "static/icon.png",
+			"selectedIconPath": "static/icon-active.png",
+			"text": "图标"
+		}, {
+			"pagePath": "pages/shang/shang",
+			"iconPath": "static/shang.png",
+			"selectedIconPath": "static/shang-active.png",
+			"text": "商城"
+		}, {
+			"pagePath": "pages/personal/personal",
+			"iconPath": "static/me.png",
+			"selectedIconPath": "static/me-active.png",
+			"text": "我的"
+		}]
+	}
+}
