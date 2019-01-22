@@ -7,6 +7,17 @@
 	//页面中配置项会覆盖 globalStyle 中相同的配置项
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path" : "pages/qidong/qidong",
+			"style" : {
+				"navigationBarTitleText" : " ",
+				"app-plus" : {
+					"titleNView" : {
+						"type" : "transparent"
+					}
+				}
+			}
+		},
+		{
 			"path": "pages/login/login",
 			"style": {
 				"navigationBarTitleText": "",
