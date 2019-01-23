@@ -12,7 +12,7 @@
 </template>
 
 <script>
-	// import {mapState, mapMutations} from 'vuex';
+	import {mapState, mapMutations} from 'vuex';
 	
 	export default {
 		data() {
@@ -24,23 +24,23 @@
 				]
 			}
 		},
-		// computed: mapState(['hasSkip']),
+		computed: mapState(['hasSkip']),
 		methods:{
-			// ...mapMutations(['skipIndex']),
+			...mapMutations(['skipIndex']),
 			bindSkip(){
-				// this.skipIndex();
+				this.skipIndex();
 				uni.reLaunch({
 					url:'../login/login'
 				});
 			}
 		},
-// 		onLoad() {
-// 			if(this.hasSkip){
-// 				uni.reLaunch({		
-// 					url: '../tabBar/news/news'
-// 				});
-// 			}
-// 		}  
+		onLoad() {
+			if(this.hasSkip){
+				uni.reLaunch({		
+					url: '../login/login'
+				});
+			}
+		}  
 	}
 </script>
 
