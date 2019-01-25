@@ -21,6 +21,20 @@
 		methods: {
 			loginTo() {
 				console.log(this.telephone, this.password)
+				if (this.telephone.length < 11) {
+				    uni.showToast({
+				        icon: 'none',
+				        title: '手机号最短为 11 个字符'
+				    });
+				    return;
+				}
+				if (this.password.length < 6) {
+				    uni.showToast({
+				        icon: 'none',
+				        title: '密码最短为 6 个字符'
+				    });
+				    return;
+				}
 				//navigateTo 不能直接写tab中的某一路径,否则会导致路径重复,导致页面不能跳转,报错
 				//switchTab只能跳转到带有tab的页面，不能跳转到不带tab的页面
 				uni.switchTab({

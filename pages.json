@@ -67,6 +67,12 @@
 			"style": {
 				"navigationBarTitleText": "详情"
 			}
+		},
+		{
+			"path": "pages/personal/contact/contact",
+			"style": {
+				"navigationBarTitleText": "通讯录"
+			}
 		}
 
 	],

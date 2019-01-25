@@ -7,7 +7,7 @@
 					<image class="uni-media-list-logo me-list-logo" src="../../static/1.png"></image>
 					<view class="uni-media-list-body me-list-body">
 						<view class="uni-media-list-text-top me-list-text">{{userName}}</view>
-						<view class="uni-media-list-text-bottom uni-ellipsis me-list-bottom">微商号：12343212345</view>
+						<view class="uni-media-list-text-bottom uni-ellipsis me-list-bottom">手机号：12343212345</view>
 					</view>
 				</view>
 			</view>
@@ -30,6 +30,16 @@
 					<image class="uni-media-list-logo" src="../../static/shezhi.png"></image>
 					<view class="uni-media-list-body">
 						<view class="uni-media-list-text-top me-list-setting">设置</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="uni-list me-list">
+			<view class="uni-list-cell" hover-class="uni-list-cell-hover" @tap="bindCommicate">
+				<view class="uni-media-list uni-list-cell-navigate uni-navigate-right">
+					<image class="uni-media-list-logo" src="../../static/tongxinlu.png"></image>
+					<view class="uni-media-list-body">
+						<view class="uni-media-list-text-top me-list-setting">通讯录</view>
 					</view>
 				</view>
 			</view>
@@ -67,7 +77,13 @@
 				uni.navigateTo({
 					url:'./loginOut/loginOut'
 				});
+			},
+			bindCommicate(){
+				uni.navigateTo({
+					url:'./contact/contact'
+				});
 			}
+				
 		}
 	}
 </script>
